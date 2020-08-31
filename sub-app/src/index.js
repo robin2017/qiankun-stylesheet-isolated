@@ -2,16 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+ 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+if(document.querySelector('#root')){
+  console.log('独立模式')
+  ReactDOM.render(<App/>, document.querySelector('#root'))
+}else{
+  console.log('集成模式')
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export async function bootstrap() {
+  console.log('react app bootstraped');
+}
+
+export async function mount(props) {
+  console.log(props);
+  ReactDOM.render(<App/>, document.querySelector('#sub-app-container'));
+}
+
+export async function unmount() {
+  ReactDOM.unmountComponentAtNode(document.querySelector('#sub-app-container'));
+}
+
+export async function update(props) {
+  console.log('update props', props);
+}

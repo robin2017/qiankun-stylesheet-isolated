@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+ import {loadMicroApp} from 'qiankun'
  
-import './App.css';
 
 function App() {
+  const btnClick = ()=>{
+    loadMicroApp({
+      name:'subApp',
+      entry:'http://localhost:12081',
+      container:"#sub-app-container"
+    })
+  }
+  useEffect(()=>{},[])
   return (
     <div className="App">
-      这是主应用
+      <ul>
+        <li>
+          <button onClick={btnClick}>加载react子应用</button>
+        </li>
+      </ul>
+   
+
+      <div id='sub-app-container'></div>
     </div>
   );
 }
