@@ -6,7 +6,7 @@ function App() {
   const btnClick = ()=>{
     loadMicroApp({
       name:'subApp',
-      entry:'http://localhost:12081',
+      entry:'//localhost:12081',
       container:"#sub-app-container"
     })
   }
@@ -18,8 +18,6 @@ function App() {
           <button onClick={btnClick}>加载react子应用</button>
         </li>
       </ul>
-   
-
       <div id='sub-app-container'></div>
     </div>
   );

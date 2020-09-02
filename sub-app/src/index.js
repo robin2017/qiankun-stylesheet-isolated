@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
  
 
-if(document.querySelector('#root')){
+if(document.querySelector('#sub-root')){
   console.log('独立模式')
-  ReactDOM.render(<App/>, document.querySelector('#root'))
+  ReactDOM.render(<App/>, document.querySelector('#sub-root'))
 }else{
   console.log('集成模式')
 }
