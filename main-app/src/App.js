@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
  import {loadMicroApp} from 'qiankun'
- 
+ import './App.scss'
 
 function App() {
   const btnClick = ()=>{
