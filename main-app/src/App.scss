@@ -1,3 +1,11 @@
-*{
-    color:red;
+// 1、禁止写这种没有业务/应用前缀的选择器
+// *{
+//     color:red;
+// }
+
+//2、所有业务选择器链条上必须包含业务前缀im-layout
+.im-layout-btn {
+    font-weight: bold !important;
 }
+
+ 

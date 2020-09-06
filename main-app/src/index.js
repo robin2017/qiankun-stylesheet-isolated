@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
  
 import App from './App';
- 
-
+import './index.css'
+import {ConfigProvider} from 'antd'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ConfigProvider prefixCls='im-layout'>
     <App />
-  </React.StrictMode>,
+  </ConfigProvider>,
   document.getElementById('main-root')
 );
  
