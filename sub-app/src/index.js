@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
  
-
+//if (!window.__POWERED_BY_QIANKUN__)  感觉没用！！！
 if(document.querySelector('#sub-root')){
   console.log('独立模式')
   ReactDOM.render(<App/>, document.querySelector('#sub-root'))
