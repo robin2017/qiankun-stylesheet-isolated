@@ -3,10 +3,13 @@ import {
     ConfigProvider,
     Button
 } from 'antd';
+import './App_prefixCls.less'
 /**
  *  */
 const Page = () => {
-    return <Button type='primary'>prefixCls demo</Button>
+    return <div><Button type='primary'>prefixCls demo</Button>
+        <div className='hello'>hello cls</div>
+    </div>
 }
 export default () => {
     return (

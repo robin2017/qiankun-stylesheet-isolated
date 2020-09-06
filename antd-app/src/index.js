@@ -6,7 +6,7 @@ import App from './App_prefixCls';
  
 import {ConfigProvider} from 'antd'
 ReactDOM.render(
-  <ConfigProvider direction='rtl'>
+  <ConfigProvider>
     <App />
   </ConfigProvider>,
   document.getElementById('root')

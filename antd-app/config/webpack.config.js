@@ -86,7 +86,7 @@ module.exports = function(webpackEnv) {
       },
       {
         loader: require.resolve('less-loader'),
-        options: cssOptions,
+        options: {...cssOptions, javascriptEnabled: true,modifyVars: { 'ant-prefix': 'robin' ,'robin-color':'blue'}},
       },
       {
         // Options for PostCSS as we reference these options twice

@@ -1,2 +1,5 @@
-@import '~antd/dist/antd.css';
-@import './antd-self/default.less';
+/* @import '~antd/dist/antd.css'; */
+
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less'; 
+/* @import './antd-self/default.less'; */
