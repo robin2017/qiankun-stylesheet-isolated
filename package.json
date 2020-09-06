@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:sub":"cd sub-app && npm i",
+    "install:antd":"cd antd-app && npm i",
+    "install:main":"cd main-app && npm i",
+    "install:all":"npm-run-all -p install:sub install:antd install:main",
     "dev:main": "cd main-app && npm run start",
     "dev:sub": "cd sub-app && npm run start",
     "dev:all": "npm-run-all -p dev:main dev:sub"
