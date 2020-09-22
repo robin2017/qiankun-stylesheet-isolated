@@ -1,8 +1,9 @@
 import React from 'react';
+import { Button } from 'antd';
 function App() {
   return (
     <div className="App">
-      这是应用
+      <Button>我是应用</Button>
     </div>
   );
 }
